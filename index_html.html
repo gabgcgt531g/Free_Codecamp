@@ -1,16 +1,319 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="es">
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>index</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <!-- titulo tipo 1 -->
+    <h2>CatPhotoApp</h2>
+    <!-- titulo tipo 2 -->
+    <p>Hello Paragraph</p>
+    <!-- párrafo -->
+
+    <!-- ELEMENTOS HTML  -->
+    <h2>CatPhotoApp</h2>
+    <main>
+    <!-- ayuda a motores de búsqueda a encontrar el contenido principal de la página -->
+      
+    <!-- AGREGA IMÁGENES -->
+    <p><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="Orange Cat"></p>
+    <!-- ing src añade imagen introduciendo direccion donde está alojada. alt añade un texto descriptivo
+        a la foto por si el navegador no puede mostrarla -->
+
+    <!-- ELEMENTOS ANCHOR PARA ENLAZAR HACIA PÁGINAS EXTERNAS -->
+
+    <p><a href="https://www.freecatphotoapp.com"> cat photos </a></p>
+    <!-- href engloba el link y antes de cierre marcamos texto que muesta en la pagina para hipervínculo -->
+
+    <!--ENLAZA SECCIONES INTERNAS CON ANCHOR-->
+    <p><a href="#footer">Jump to bottom</a></p>
+        <!--añanade etiqueta para generar un hipervínculo a una dirección del documento  -->
+      
+    <!--ANIDADO DE ANCHOR DENTRO DE PÁRRAFO-->
+      <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+      <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+      <p>View more <a href="https://www.freecatphotoapp.com" target="_blank">cat photos</a></p>
+      <!-- taget especifica donde abrir el enlace y _blank indica que en una nueva pestáña en blanco -->
+
+    <!--ENLACES MUERTOS UTILIZANDO #-->
+      <p>Click here to view enlace muerto <a href="#" target="_blank">cat photos</a>.</p>
+      <!-- dejando hash (#) dejas la opción de definir el link mas adelante -->
+
+    <!--CONVIERTE IMAGEN EN ENLACE-->
+    <p>Click here to view more <br>
+      <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">
+      </a>.
+    </p>
+    <!-- anidando la imagen dentro de anchor conviertes la imagen en link -->
+
+    <!--LISTAS NO ORDENADAS-->
+    <p>Things cats love:</p>
+    <ul>
+    <!-- anida la lista desordenada -->
+      <li>fish</li>
+      <!-- enumera cada componente-->
+      <li>milk</li>
+      <li>sleep</li>
+    </ul>
+
+    <!--LISTAS ORDENADAS-->
+    <p>Top 3 things cats hate:</p>
+    <ol>
+    <!-- anida la lista ordenada -->
+      <li>water</li>
+      <li>cucumber</li>
+      <li>dogs</li>
+    </ol>
+
+    <!--CREA CAMPO DE TEXTO-->
+    <input type="text">
+    <!-- crea casilla para que el usuario la rellene, en este caso con texto -->
+    <br>
+
+    <!--AGREGA TEXTO PROVISIONAL AL CAMPO DE TEXTO-->
+    <input type="text"placeholder="cat photo URL">
+    <!-- crea casilla para que el usuario la rellene, en este caso con texto, con un texto provisional -->
+    <br>
+
+    <!--CREA ELEMENTO DE FORMULARIO-->
+    <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+      <!-- genera un formulario, en el  que el atributo action da la dirección donde almacenas la info -->
+      <input type="text" placeholder="cat photo URL">
+
+    <!--AGREGA BOTON DE ENVIO DE FOMULARIO-->
+      <button type="submit">Submit</button>
+    <!-- agregas un boton, en este caso tipo submit para enviar la respuesta del formulario -->
+    </form>
+    <!-- cierra formulario -->
+
+    <!--HTML5 PARA REQUERIR UN CAMPO-->
+    <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+      <input type="text" placeholder="cat photo URL"required>
+      <!-- required hace que si el usuario no rellena el campo no envía el formulario -->
+      <button type="submit">Submit</button>
+    </form>
+
+    <!--CONJUNTO DE BOTONES DE RADIO-->
+    <form>
+      <label for="indoor">
+        <!--  -->
+        <input id="indoor" type="radio" name="indoor-outdoor">Indoor
+        <!-- id nombra el elemento y label lo llamará. type indica el tipo de input y name relaciona las inputs con el mismo atributo -->
+      </label>
+      <label for="outdoor"> 
+        <input id="outdoor" type="radio" name="indoor-outdoor">Outdoor 
+      </label>
+    </form>
+
+    <!--CONJUNTO DE CASILLAS DE VERIFICACIÓN-->
+    <form>
+      <label for="loving">
+        <input id="loving" type="checkbox" name="personality"> Check 1
+      </label>  <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>index</title>
+      </head>
+      <body>
+        <h1>Hello World</h1>
+        <!-- titulo tipo 1 -->
+        <h2>CatPhotoApp</h2>
+        <!-- titulo tipo 2 -->
+        <p>Hello Paragraph</p>
+        <!-- párrafo -->
+    
+        <!-- ELEMENTOS HTML  -->
+        <h2>CatPhotoApp</h2>
+        <main>
+        <!-- ayuda a motores de búsqueda a encontrar el contenido principal de la página -->
+          
+        <!-- AGREGA IMÁGENES -->
+        <p><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="Orange Cat"></p>
+        <!-- ing src añade imagen introduciendo direccion donde está alojada. alt añade un texto descriptivo
+            a la foto por si el navegador no puede mostrarla -->
+    
+        <!-- ELEMENTOS ANCHOR PARA ENLAZAR HACIA PÁGINAS EXTERNAS -->
+    
+        <p><a href="https://www.freecatphotoapp.com"> cat photos </a></p>
+        <!-- href engloba el link y antes de cierre marcamos texto que muesta en la pagina para hipervínculo -->
+    
+        <!--ENLAZA SECCIONES INTERNAS CON ANCHOR-->
+        <p><a href="#footer">Jump to bottom</a></p>
+            <!--añanade etiqueta para generar un hipervínculo a una dirección del documento  -->
+          
+        <!--ANIDADO DE ANCHOR DENTRO DE PÁRRAFO-->
+          <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+          <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+          <p>View more <a href="https://www.freecatphotoapp.com" target="_blank">cat photos</a></p>
+          <!-- taget especifica donde abrir el enlace y _blank indica que en una nueva pestáña en blanco -->
+    
+        <!--ENLACES MUERTOS UTILIZANDO #-->
+          <p>Click here to view enlace muerto <a href="#" target="_blank">cat photos</a>.</p>
+          <!-- dejando hash (#) dejas la opción de definir el link mas adelante -->
+    
+        <!--CONVIERTE IMAGEN EN ENLACE-->
+        <p>Click here to view more <br>
+          <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">
+          </a>.
+        </p>
+        <!-- anidando la imagen dentro de anchor conviertes la imagen en link -->
+    
+        <!--LISTAS NO ORDENADAS-->
+        <p>Things cats love:</p>
+        <ul>
+        <!-- anida la lista desordenada -->
+          <li>fish</li>
+          <!-- enumera cada componente-->
+          <li>milk</li>
+          <li>sleep</li>
+        </ul>
+    
+        <!--LISTAS ORDENADAS-->
+        <p>Top 3 things cats hate:</p>
+        <ol>
+        <!-- anida la lista ordenada -->
+          <li>water</li>
+          <li>cucumber</li>
+          <li>dogs</li>
+        </ol>
+    
+        <!--CREA CAMPO DE TEXTO-->
+        <input type="text">
+        <!-- crea casilla para que el usuario la rellene, en este caso con texto -->
+        <br>
+    
+        <!--AGREGA TEXTO PROVISIONAL AL CAMPO DE TEXTO-->
+        <input type="text"placeholder="cat photo URL">
+        <!-- crea casilla para que el usuario la rellene, en este caso con texto, con un texto provisional -->
+        <br>
+    
+        <!--CREA ELEMENTO DE FORMULARIO-->
+        <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+          <!-- genera un formulario, en el  que el atributo action da la dirección donde almacenas la info -->
+          <input type="text" placeholder="cat photo URL">
+    
+        <!--AGREGA BOTON DE ENVIO DE FOMULARIO-->
+          <button type="submit">Submit</button>
+        <!-- agregas un boton, en este caso tipo submit para enviar la respuesta del formulario -->
+        </form>
+        <!-- cierra formulario -->
+    
+        <!--HTML5 PARA REQUERIR UN CAMPO-->
+        <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+          <input type="text" placeholder="cat photo URL"required>
+          <!-- required hace que si el usuario no rellena el campo no envía el formulario -->
+          <button type="submit">Submit</button>
+        </form>
+    
+        <!--CONJUNTO DE BOTONES DE RADIO-->
+        <form>
+          <label for="indoor">
+            <!--  -->
+            <input id="indoor" type="radio" name="indoor-outdoor">Indoor
+            <!-- id nombra el elemento y label lo llamará. type indica el tipo de input y name relaciona las inputs con el mismo atributo -->
+          </label>
+          <label for="outdoor"> 
+            <input id="outdoor" type="radio" name="indoor-outdoor">Outdoor 
+          </label>
+        </form>
+            <input id="loving" type="checkbox" name="personality"> check 1
+          </label>
+          <label for="loving">
+            <input id="loving" type="checkbox" name="personality"> Check 2
+          </label>
+          <label for="loving">
+            <input id="loving" type="checkbox" name="personality"> Check 3
+          </label>
+        </form>
+    
+        <!--ATRIBUTO VALUE UTILIZADO EN BOTON DE RADIO Y CASILLAS DE VERIFICACION-->
+        <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+          <label for="indoor">
+            <input id="indoor" value= "indoor" type="radio" name="indoor-outdoor" checked> Indoor
+            <!-- marca la casilla por defecto con el atributo checked -->
+          </label>
+            <!-- este es el valor que se reportara a la base de datos dependiendo de lo que marque el usuario en el formulario -->
+          <label for="outdoor">
+            <input id="outdoor" value= "outdoor" type="radio" name="indoor-outdoor"> Outdoor
+          </label><br>
+          <label for="loving">
+            <input id="loving" value= "loving" type="checkbox" name="personality" checked> Loving
+          </label>
+          <label for="lazy">
+            <input id="lazy" value= "lazy" type="checkbox" name="personality"> Lazy
+          </label>
+          <label for="energetic">
+            <input id="energetic" value= "energetic" type="checkbox" name="personality"> Energetic
+          </label><br>
+        </form>
+    
+        <!-- ANIDO MUCHOS ELEMENTOS DENTRO DE UNO SOLO LLAMADO div -->
+        <div>
+          <p>Things cats love:</p>
+          <ul>
+          <!-- anida la lista desordenada -->
+            <li>fish</li>
+            <!-- enumera cada componente-->
+            <li>milk</li>
+            <li>sleep</li>
+          </ul>
+          
+          <!--LISTAS ORDENADAS-->
+          <p>Top 3 things cats hate:</p>
+          <ol>
+          <!-- anida la lista ordenada -->
+            <li>water</li>
+            <li>cucumber</li>
+            <li>dogs</li>
+          </ol>
+        </div>
+        </main>
+        <footer id="footer">Copyright Cat Photo App</footer>
+        <!-- define una dirección en el documento con el atributo id. ya siempre se llamara así para todo el documento -->
+      </body>
+      </label>
+        <!-- este es el valor que se reportara a la base de datos dependiendo de lo que marque el usuario en el formulario -->
+      <label for="outdoor">
+        <input id="outdoor" value= "outdoor" type="radio" name="indoor-outdoor"> Outdoor
+      </label><br>
+      <label for="loving">
+        <input id="loving" value= "loving" type="checkbox" name="personality" checked> Loving
+      </label>
+      <label for="lazy">
+        <input id="lazy" value= "lazy" type="checkbox" name="personality"> Lazy
+      </label>
+      <label for="energetic">
+        <input id="energetic" value= "energetic" type="checkbox" name="personality"> Energetic
+      </label><br>
+    </form>
+
+    <!-- ANIDO MUCHOS ELEMENTOS DENTRO DE UNO SOLO LLAMADO div -->
     <div>
-        <h1>titulo de prueba</h1>
-        <h2>Pureba git diff</h2>
-        
+      <p>Things cats love:</p>
+      <ul>
+      <!-- anida la lista desordenada -->
+        <li>fish</li>
+        <!-- enumera cada componente-->
+        <li>milk</li>
+        <li>sleep</li>
+      </ul>
+      
+      <!--LISTAS ORDENADAS-->
+      <p>Top 3 things cats hate:</p>
+      <ol>
+      <!-- anida la lista ordenada -->
+        <li>water</li>
+        <li>cucumber</li>
+        <li>dogs</li>
+      </ol>
     </div>
-</body>
+    </main>
+    <footer id="footer">Copyright Cat Photo App</footer>
+    <!-- define una dirección en el documento con el atributo id. ya siempre se llamara así para todo el documento -->
+  </body>
 </html>

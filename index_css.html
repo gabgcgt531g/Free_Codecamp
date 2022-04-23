@@ -1,13 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Document</title>
-</head>
-<body>
-    <h1>Titulo en css.html</h1>
-    <h2>Negritas 2 ccs.html</h2>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi obcaecati voluptates officiis laborum magnam quaerat odio dolor! Ipsa omnis nostrum alias doloremque dignissimos soluta cumque optio saepe quidem nisi. Voluptatum.
-    </p>
-</body>
-</html>
+
+<!-- SELECTORES CSS PARA DAR ESTILO A ELEMENTOS -->
+<style>
+    h2 {
+      color: blue;
+    /* define color del texto */
+    }
+  </style>
+  <!-- creando un selector, damos el color deseado a todos los elementos anidados en el mismo elemento -->
+  <h2>Heading 2 blue color</h2>
+  
+  <!-- SELECTORES CSS PARA APLICAR ESTILO A ELEMENTOS -->
+  <style>
+    .red-text {
+    /* puedes delarar una clase en el atriburo style y utilizarla como class en cada elemento que desees */
+      color: red;
+    }
+    .yellow-text{
+      color: yellow;
+    }
+    p {
+      font-size: 16px;
+      /* define el tamaño de la fuente de todos los elemetos p de párrafo */
+      font-family: monospace;
+      /* define el estilo de la fuente en todos los elemenos p de párrafo */
+    }
+  </style>
+  
+  <!-- IMPORTA FUENTES DE GOOGLE FONTS -->
+  <link 
+    href="https://fonts.googleapis.com/css?family=Lobster" 
+    rel="stylesheet" 
+    type="text/css">
+    ul {
+      font-family: Lobster, monospace;
+      /* esta fuente está extraída del link anterior, es decir de google y afecta solo al elemento ul */
+  
+  /* EXPECIFICA COMO DEBEN DEGRADARSE LAS FUENTES */
+      /* despues de la coma de lobster, se pone una fuente alternativa por si el navegador en cuestión no tiene la primaria, muestra la 
+      secundaria */
+    }
+  </style>
+  
+  <h2 class="red-text">Heading 2 red color</h2>
+  <!-- aquí utilizamos la la clase llamando por el nombre que le hemos definido -->
+  
+  <!-- CAMBIO DE COLO DE TEXTO -->
+  <h2 style="color: red;">CatPhotoApp</h2>
+  <!--style="color: red;" style define el estilo del texto referido; color define el color del texto referido. Si añadimos estilo
+  a un elemento individualmente, aunque haya un selector definido para todos, predomina el individual -->
+  <main>
+    <p>Click here to view more <a href="#">cat photos</a>.</p>
+  
+  <!--  CAMBIA TAMAÑO DE IMAGENES -->
+  <style>
+    /* creamos una clase dando caraterísticas de ancho de foto*/
+    .larger-image{
+      width: 250px;
+    }
+  </style>
+  
+  <!-- CREAR BORDE A LA FOTO -->
+  <style>
+    .border-green{
+      /* crea una clase dando el color el ancho y el estilo de borde de la foto */
+      border-color: green;
+      border-width: 5px;
+      border-style: solid; 
+    }
+  </style>
+  
+  <!-- ESQUINAS REDONDEADAS EN FOTO -->
+  <style>
+    .esq-red{
+      /* crea una clase para darle un borde redonde a la foto */
+      border-radius: 10%;
+    }
+  </style>
+  
+  <style>
+    .edit-total{
+      width: 250;
+      border-width: 7px;
+      border-color: black;
+      border-style: solid;
+      border-radius: 15%;
+    }
+  </style>
+    <a href="#"><img class="larger-image" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+    <!-- añade la clase creada larger-image para que la foto tenga 250 pixeles de ancho-->
+    <img class=" larger-image border-green" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">
+    <!-- anade la clase creada border-green para poner borde a la foto -->
+    <img class=" larger-image border-green esq-red" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">
+    <!-- anade la clase creada border-radius -->
+    <img class="edit-total" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">
+    <div>
+      <p>Things cats love:</p>
+      <ul>
+        <li>cat nip</li>
+        <li>laser pointers</li>
+        <li>lasagna</li>
+      </ul>
+      <p>Top 3 things cats hate:</p>
+      <ol>
+        <li>flea treatment</li>
+        <li>thunder</li>
+        <li>other cats</li>
+      </ol>
+    </div>
+  
+    <form action="https://freecatphotoapp.com/submit-cat-photo">
+      <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+      <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+      <label><input type="checkbox" name="personality" checked> Loving</label>
+      <label><input type="checkbox" name="personality"> Lazy</label>
+      <label><input type="checkbox" name="personality"> Energetic</label><br>
+      <input type="text" placeholder="cat photo URL" required>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
