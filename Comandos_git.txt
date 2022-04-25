@@ -124,3 +124,5 @@ Subir archivos de una rama desde PC a GitHub
 	Git add + nombre del archivo: pasa a Stage el archivo
 	Git commit -m “Texto de versión”: compromete el archivo y añade comentario.
 	Git push -u origin ramaC: sube la versión de la ramaC al repositorio en GitHub.
+Bajar repositorio de GitHub o actualizar vscode con info de GitHub
+	Git pull origin master: trae los archivos guardados en la rama "master" en GitHub
