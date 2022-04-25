@@ -1,0 +1,124 @@
+índice
+INSTALACIÓN GIT HUB {respeta los espacios de cada comando}
+
+COMANDOS EN GIT BASH {respeta los espacios de cada comando}
+	Crear repositorios o archivos.
+	Guardar cambios en archivos.
+	Eliminar archivo.
+	Recuperar archivo eliminado en Status.
+	Cambio de nombre del archivo
+		Forma abreviada
+	Ignorar archivos y directorios
+	Ramas en Git o branches
+		Traer cambios de ramab a master
+	Subir el contenido a la nube.
+		Generar token
+		Subir archivos desde PC a GitHub
+		Subir archivos de una rama desde PC a GitHub
+ 
+INSTALACIÓN GIT HUB {respeta los espacios de cada comando}
+
+	https://git-scm.com/downloads = descarga el programa y ejecuta .exe
+	Acepta licencia pública y elruta donde se instala por defecto.
+	Select Components: en Win11 instala Git Bash. Solo Git LFS en los demás.
+	Carpeta “Git” por defecto y elige el editor de texto en la siguiente (vscode).
+	Git decide el repositorio de almacenamiento 
+	Win11 User Git from Git Bash only. En los demás la terminal del equipo.
+	Gestor OpenSSL library. Conversor a HTTPS por defecto. Lo demás por defecto.
+	En windows usa git bash
+	git –version: ves si tienes instalado correctamente git
+	git config --global user.name "nombre del usuario": --global afecta a todos los proyectos y user.name define el nombre del usuario que utilizará git.
+	git config --global user.email gabgc.z930@gmail.com: define el correo del usuario por defecto.
+	git config --global core.editor "code --wait": define el editor de texto por defecto y el comando --wait hace la terminal se quede esperando hasta que cerramos el editor.
+	git config --global -e: muesta el editor de código local.
+	git config --global core.autocrlf true/input: se aplica CR (Carriage Return) y LF (Line Feed) en Windows y LF en Linux o Mac, para cambiar de línea. Para subir código hay que eliminarlo y para bajarlo deberá eliminarlo. Para ello, en Windows hay que poner ese 	valor en "True" y en Linux/Mac hay ponerlo como input.
+	git config -h: muestra todos los comandos que se pueden agregar a la configuración de git.
+
+COMANDOS EN GIT BASH {respeta los espacios de cada comando}
+
+	ls + enter: dice todas las carpetas o repositorios que hay en tu equipo.
+	pwd + enter: dice en el directorio que te encuentras.
+	cd +nombre de repositorio: entras dentro del ese repositorio.
+	cd + primera/s letras de repositorio + TAB: autocompleta con nombre de repositorios que empiezan con esa/s letras.
+	cd + .. : vuelve atrás un repositorio.
+Crear repositorios o archivos.
+	mkdir + nombre de nuevo repositorio: crea un repositorio nuevo dentro del que ya estés con el nombre escrito por ti.
+	git init: crea repositorio en git para nuestro proyecto (Ej: Initialized empty Git repository in C:/Users/Gabriel/Documents/Workspace/Freecodecamp/.git/).
+	ls -a: muestra directorios y archivos ocultos. En este caso, después de crear el repositorio, muestra a la estructura de repositorio (Detalle de implementación).
+	cd .git: muestra todos los archivos creados para poder almacenar nuestro código.
+	core . : abre el repositio creado en vscode.
+Guardar cambios en archivos.
+	git status: indica el estado de nuestro proyecto, si está en "Stage" "Commit" "Server".
+	git add + archivo que deseas guardar o extensión de los archivos o . : si nombras un archivo de los que aprece en git status guardas ese, si pones una extensión, guarda todos los que la tengan y con el punto guardas todo lo que sale en git status y no está 	guardado.
+	git add + nombre archivo + nombre archivo 2: para añadir más de un archivo, solo hay que dejar un espacio entre ellos.
+	git commit -m "Mensaje de guardado": para comprometer el mensaje con un mensaje de guardado se utiliza este comando.
+	git commit (-a en windows): sirve para añadir compromenter los cambios realizados. Abre el editor para que añadas mensaje de guardado. Se guarda la página en vscode y se cierra para lo refleje en bash.
+Eliminar archivo.
+	rm + nombre de archivo: sirve para eliminar archivo. Se haces git status, ves el archivo en "files not commit".
+	git add + nombre del archivo: devuelve el archivo a etapa de Stage.
+	git commit -m "Eliminado archivo": compromete el archivo para eliminarlo.
+	ls: muestra que ya no está el archivo eliminado.
+Recuperar archivo eliminado en Status.
+	git rm + nombre del archivo: eliminas el archivo saltando un paso.
+	git restore --staged + nombre del archivo: lo recuperas de Staged.
+	git restore + nombre del archivo: la recuperas al repositorio de origen.
+Cambio de nombre del archivo
+	mv + nombre actual del archivo + nombre nuevo: sirve para cambiar el nombre a un archivo poniendo nombre actual y el nuevo separado por espacio.
+	git add + nombre actual del archivo + nombre nuevo: lleva el nombre nuevo a Stage
+	git commit -m "Mensaje de cambio": compromete cambio.
+Forma abreviada
+	git mv + nombre actual del archivo + nombre nuevo: lleva el cambio de nombre directamente a Stage.
+	git commit -m "Mensaje de cambio": compromete cambio.
+Ignorar archivos y directorios
+	Para tener archivos específicos de configuración en nuestra máquina y que no se suban cuando realizamos un cambio. Por ejemplo un archivo .env que engloba contraseñas, etc.
+	Creas un archivo .env en vscode (user + password)
+	Creas un archivo en vscode llamado .gitignore y escribes los archivos (.env) o carpetas que queremos ignorar (node_module/)
+	Git status: desaparece .env y aparece .gitignore
+	git add .gitignore: añade a .gitignore a Stage
+	git commit -m “texto”: compromete .gitignore
+	git status -s: muestra el estado de cada archivo que contenga el repositorio más abreviado.
+	Git diff: si haces una modificación en cualquier archivo, te muestra que hay y que había.
+	Git add HTMLBasico.html: mueve a Stage el archivo para proceder a guardar la modificación.
+	Git diff --staged: muestra los cambios realizados en el archivo una vez este está en Stage.
+	Git log --oneline: muestra todos los cambios con los comentarios que hemos dejado en cada commit.
+Ramas en Git o branches
+	Sirve para hacer cambios en paralelo de un mismo archivo o documento, es decir, a la vez.
+	Git status: vemos un archivo en Stage
+	Git restore --staged css.html: recuperas la anterior versión en Stage
+	Git restore Css.html: recuperas completamente
+	Git Branch: ves la rama principal en la que estás trabajando.
+	Git checkout -b + nombre de la rama nueva (ej: ramab): crea rama nueva
+	Git add Css.html: añadimos a Stage en ramab
+	Git commit -m “texto”: comprometemos en ramab
+	Git log --oneline: ver el historial donde estamos trabajando.
+	Cat Css.html: muestra lo que contiene el archivo
+	Git checkout master: volvemos a rama master
+	Cat Css.html: muestra lo que contiene sin el cambio realizado en ramab
+Traer cambios de ramab a master
+	Escribimos en la rama master.
+	Git checkout master: sale de la rama en cuestión y entra en la rama principal (master/main)
+	Git merge + nombre de la rama que queremos traer (ramab): une el contenido de el contenido del archivo en ramab y en master. 
+Subir el contenido a la nube.
+	GitHub.com y creamos cuenta.
+	Crear un repositorio.
+	Una vez creado nos da instrucciones para poder subir código al repositorio. Copiamos:
+	git remote add origin https://github.com/gabgcgt531g/Freecodecamp.git: lo pegamos en Git Bash. 
+	Le dice que este es el repositorio web donde vamos a coger y guardar nuestro proyecto.
+	git push -u origin master (main Linux/Mac): vincula la cuenta, añadiendo pass y user.
+Generar token
+	https://github.com/settings/apps
+	Personal Access tokens
+	Damos el nombre del equipo/usuario al que le damos acceso.
+	Los días que damos acceso
+	A los repositorios que damos acceso.
+	Copiamos y pegamos enlace (token) en bash si nos pide contraseña después de git push -u origin master (main).
+Subir archivos desde PC a GitHub
+	Modificamos archivo en rama principal (master/main) o merge de ramas secundarias a la principal antes de guardar.
+	Git add + nombre del archivo
+	Git commit -m “Texto de versión”
+	Git push: para subirlo al repositorio en GitHub.
+Subir archivos de una rama desde PC a GitHub
+	Git checkout -b ramaC: Creamos una ramaC y modificamos archivo en cuestión.
+	Git add + nombre del archivo: pasa a Stage el archivo
+	Git commit -m “Texto de versión”: compromete el archivo y añade comentario.
+	Git push -u origin ramaC: sube la versión de la ramaC al repositorio en GitHub.
