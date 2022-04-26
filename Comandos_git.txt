@@ -1,4 +1,4 @@
--- TOKEN -- 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 -- 30 DIAS DESDE 23/04/2022 -- ACABA 23/05/2022
+-- TOKEN -- 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 -- 30 DIAS DESDE 23/04/2022 -- ACABA 23/05/2022
 
 índice
 INSTALACIÓN GIT HUB {respeta los espacios de cada comando}

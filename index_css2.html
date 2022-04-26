@@ -1,0 +1,72 @@
+<!-- AJUSTE RELLENO DE UN ELEMENTO -->
+<!-- PADDING: tamaño entre el texto del cuadro y su borde -->
+<!-- puede controlar el espacio de los lados izq y dcho y arriba y abajo con respecto al borde -->
+<!-- MARGIN: controla el espacio entre elemento BORDER y los elementos que le rodean. -->
+<!-- Con valor negativo el elemento crece-->
+
+<style>
+  .injected-text {
+    margin-bottom: -25px;
+    text-align: center;
+    padding: 1.5em;
+    /* em, es una unidad relativa. Ajustan el tamaño del objeto al que afectan al padre. Es decir, por ejemplo, la fuente se adapta al tamaño de la ventana */
+  }
+
+  .box {
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+  }
+
+  .yellow-box {
+    background-color: yellow;
+    padding: 10px /*top*/ 20px /*right*/ 20px /*bottom*/ 10px /*left*/;
+    margin: 10px /*top*/ 20px /*right*/ 20px /*bottom*/ 10px /*left*/;
+    /* en sentido de las agujas del reloj */
+  }
+
+  .red-box {
+    background-color: crimson;
+    color: #fff;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  .blue-box {
+    background-color: blue;
+    color: #fff;
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+  }
+
+  body {
+    background-color: black;
+    font-family: monospace;
+    color: green;
+  }
+  .pink-text {
+    color: pink;
+  }
+  .blue-text {
+    color: blue;
+  }
+  /* prevalece la declaración de clase  que este mas abajo dentro de style */
+  #orange-text{
+    color: orange;
+  }
+</style>
+
+<h1 class="pink-text blue-text" id="orange-text">Hello World!</h1>
+<!-- lee indistintamente del orden. Prevalece la clase que mas abaja esté dentro de style.  -->
+<!-- los identificadores prevalencen a las clases -->
+<h5 class="injected-text">margin</h5>
+
+<div class="box yellow-box">
+  <h5 class="box red-box">padding</h5>
+  <h5 class="box blue-box">padding</h5>
+</div>
