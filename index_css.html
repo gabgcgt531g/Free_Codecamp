@@ -27,18 +27,16 @@
   </style>
   
   <!-- IMPORTA FUENTES DE GOOGLE FONTS -->
-  <link 
-    href="https://fonts.googleapis.com/css?family=Lobster" 
-    rel="stylesheet" 
-    type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+   <style>
     ul {
       font-family: Lobster, monospace;
-      /* esta fuente está extraída del link anterior, es decir de google y afecta solo al elemento ul */
-  
-  /* EXPECIFICA COMO DEBEN DEGRADARSE LAS FUENTES */
-      /* despues de la coma de lobster, se pone una fuente alternativa por si el navegador en cuestión no tiene la primaria, muestra la 
-      secundaria */
     }
+      /* esta fuente está extraída del link anterior, es decir de google y afecta solo al elemento ul
+  
+    EXPECIFICA COMO DEBEN DEGRADARSE LAS FUENTES 
+      despues de la coma de lobster, se pone una fuente alternativa por si el navegador en cuestión no tiene la primaria, muestra la 
+      secundaria */
   </style>
   
   <h2 class="red-text">Heading 2 red color</h2>
@@ -57,27 +55,20 @@
     .larger-image{
       width: 250px;
     }
-  </style>
-  
-  <!-- CREAR BORDE A LA FOTO -->
-  <style>
+
+    /* CREAR BORDE A LA FOTO */
     .border-green{
       /* crea una clase dando el color el ancho y el estilo de borde de la foto */
       border-color: green;
       border-width: 5px;
       border-style: solid; 
     }
-  </style>
   
-  <!-- ESQUINAS REDONDEADAS EN FOTO -->
-  <style>
+  /* ESQUINAS REDONDEADAS EN FOTO */
     .esq-red{
       /* crea una clase para darle un borde redonde a la foto */
       border-radius: 10%;
-    }
-  </style>
-  
-  <style>
+    }   
     .edit-total{
       width: 250;
       border-width: 7px;
@@ -85,7 +76,19 @@
       border-style: solid;
       border-radius: 15%;
     }
+
+    /* FONDO DE div EN PLATEADO */
+    .silver-background{
+      background-color :silver;
+    }
+    
+    /* DAR ESTILO A UN ATRIBUTO ID */
+    #cat-photo-app{
+      background-color: green;
+      /* siempre prevalece la ordenes de id a las de class en caso de conflicto de  estilo */
+    }
   </style>
+    
     <a href="#"><img class="larger-image" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
     <!-- añade la clase creada larger-image para que la foto tenga 250 pixeles de ancho-->
     <img class=" larger-image border-green" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">
@@ -93,6 +96,7 @@
     <img class=" larger-image border-green esq-red" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">
     <!-- anade la clase creada border-radius -->
     <img class="edit-total" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">
+    
     <div>
       <p>Things cats love:</p>
       <ul>
@@ -108,7 +112,8 @@
       </ol>
     </div>
   
-    <form action="https://freecatphotoapp.com/submit-cat-photo">
+    <form id="cat-photo-app" action="https://freecatphotoapp.com/submit-cat-photo">
+      <!-- id agrega un atributo a un elemento. Debe ser exclusivo para ese elemento. Se usa para darle estilo o para darle modificar elementos específios en JavaScript  -->
       <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
       <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
       <label><input type="checkbox" name="personality" checked> Loving</label>
