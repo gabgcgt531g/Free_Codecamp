@@ -10,10 +10,14 @@
     /* tamaño de la fuente */
     text-transform: uppercase;
     /* transforma el texto, en este caso en mayñusculas y se utiliza para no tener que cambiar los elementos que tengas estas prpiedades uno a uno */
+    font-weight: 1000;
+    /* grosor de la fuente */
   }
   p {
     text-align: justify;
     /* justifica el texto*/
+    line-height: 25px;
+    /* establece la distancia de interlineado */
   }
   .links {
     text-align: left;
@@ -58,4 +62,107 @@
     </div>
   </div>
 </div>
+
+<style>
+a:hover{
+  color: blue;
+  /* genera una pseudo-clase para esta clase, para que la fuente se ponga de color azul cuando pase le cursor por ella  */
+}
+a {
+  color: #000;
+  /* hace que el color de la fuente de esta clase, por defecto sea negro */
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+    position: relative;
+    /* css lo moverá relativo a su posición */
+    top: 5px;    
+    left: 90px;
+    /* marca la posición fija */
+  }
+  #searchbar {
+    position: absolute;
+    /* provee al elemento de una posición inamovible y  abajo la marca */
+    top: 50px;
+    right: 50px;
+  }
+  section {
+    position: relative;
+  }
+  body {
+    min-height: 150vh;
+  }
+  #navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: #767676;
+  }
+  nav ul {
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+  }
+  nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+  a {
+    text-decoration: none;
+  }
+</style>
+<a href="https://freecatphotoapp.com/" target="_blank">CatPhotoApp</a>
+<body>
+  <h1>On Being Well-Positioned</h1>
+  <h2>Move me!</h2>
+  <p>I still think the h2 is where it normally sits.</p>
+  <h1>Welcome!</h1>
+  <section>
+    <form id="searchbar">
+      <label for="search">Search:</label>
+      <input type="search" id="search" name="search">
+      <input type="submit" name="submit" value="Go!">
+    </form>
+  </section>
+</body>
+<hr>
+<style>
+  body {
+    min-height: 150vh;
+  }
+  #navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: black;
+  }
+  nav ul {
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+  }
+  nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+  a {
+    text-decoration: none;
+  }
+</style>
+<body>
+  <header>
+    <h1>Welcome!</h1>
+    <nav id="navbar">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <p>I shift up when the #navbar is fixed to the browser window.</p>
+</body>
+
+
 
