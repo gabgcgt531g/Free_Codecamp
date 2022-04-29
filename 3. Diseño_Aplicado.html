@@ -1,16 +1,25 @@
 <style>
   h4 {
     text-align: center;
+    /* elinea el texto */
     padding: 10px;
+    /* tamaño de la caja que engloba el texto. Nunca mas pequeña la caja que el texto */
     background-color: rgba(45, 45, 45, 0.1);
+    /* color del fondo de la caja */
     font-size: 27px;
+    /* tamaño de la fuente */
+    text-transform: uppercase;
+    /* transforma el texto, en este caso en mayñusculas y se utiliza para no tener que cambiar los elementos que tengas estas prpiedades uno a uno */
   }
   p {
     text-align: justify;
     /* justifica el texto*/
   }
   .links {
-    margin-right: 20px;
+    text-align: left;
+    color: black;
+    opacity: 0.7;
+    /* controla la opacidad del elemento */
   } 
   #thumbnail {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -26,6 +35,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: 10px 5px;
+    /* situa la caja en el espacio de la hoja */
     padding: 4px;
   }
   .cardContent {
@@ -36,13 +46,16 @@
   <div class="cardContent">
     <div class="cardText">
       <h4><s>Google</s> Alphabet</h4>
+      <!-- s tacha el texto -->
       <hr>
+      <!-- añade una línea horizontal -->
       <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em></p>
+      <!-- u subraya; em da enfasis -->
     </div>
     <div class="cardLinks">
-      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a>
+      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br><br>
       <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
     </div>
   </div>
 </div>
-<h1>como ver est amierda en blanco</h1>
+
