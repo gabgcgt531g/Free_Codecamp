@@ -127,20 +127,22 @@ h2 {
     </form>
   </section>
 </body>
-<hr>
+
 <style>
   body {
     min-height: 150vh;
   }
   #navbar {
     position: fixed;
+    /* fija posición de un elemento */
     top: 0px;
     left: 0px;
     width: 100%;
-    background-color: black;
+    background-color: rgb(214, 207, 207);
+    
   }
   nav ul {
-    margin: 0px;
+    margin: auto;
     padding: 5px 0px 5px 30px;
   }
   nav li {
@@ -149,6 +151,8 @@ h2 {
   }
   a {
     text-decoration: none;
+    /* margin: auto;
+     centra automáticamente el elemento, independientemente del tamaño de la pestaña web */
   }
 </style>
 <body>
@@ -163,6 +167,66 @@ h2 {
   </header>
   <p>I shift up when the #navbar is fixed to the browser window.</p>
 </body>
+
+<head>
+  <style>
+    #left {
+      float: left;
+      width: 50%;
+    }
+    #right {
+      float: right;
+      /* fija elemento id en una posición de la pagina, izquierda o derecha. */
+      width: 40%;
+    }
+    aside, section {
+      padding: 2px;
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome!</h1>
+  </header>
+  <section id="left">
+    <h2>Content</h2>
+    <p>Good stuff</p>
+  </section>
+  <aside id="right">
+    <h2>Sidebar</h2>
+    <p>Links</p>
+  </aside>
+</body>
+
+<style>
+  div {
+    width: 60%;
+    height: 200px;
+    margin-top: 20px;
+  }
+  .first {
+    background-color: red;
+    position: absolute;
+    z-index: 2;
+    /* pone por delante, o trae al frente a un elemento */
+  }
+  .second {
+    background-color: blue;
+    position: absolute;
+    left: 40px;
+    top: 50px;
+    z-index: 1;
+  }
+</style>
+<div class="first"></div>
+<div class="second"></div>
+
+
+
+
+
+
 
 
 
