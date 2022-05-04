@@ -1,0 +1,12 @@
+ls -al: define lo que alberga esa carpeta en forma de lista
+... -v: muestra lo que hace el comando en la consola
+... | grep + nombre de archvivo que buscamos: este comando mas ls, filtra todas los archivo o repositorios con un nombre igual o parecido que hay en una repositorio.
+mkdir -v + nombre de repositorio: crea un repositorio.
+unzip -v + nombre del archivo comprimido en la carpeta: descomprime un archivo .zip. 
+sudo su: entrar a un repositorio con permisos de superusuario.
+cp -v + ruta donde se encuentra un archivo: copia un archivo de una ruta.
+fc-cache -f -v: refersca todas la fuentes registradas en el sistema, dentro de la carpeta donde están las fuentes. Solo puede superusuario.
+exit: para salir de superusuario y cerrar terminal si no estás en superusuario.
+clear: limpiar terminal
+
+
