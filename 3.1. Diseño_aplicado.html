@@ -39,8 +39,35 @@
     color: white;
     padding: 0.5em;
   }
+  div {
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin: 50px auto;
+    background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+    /* define cuadro con características definidas y con un degradado de color, donde expecifica la orientación del degradado (90deg en sentido horizontal, 45deg sentido diagonal) y de que a que color va */
+  }
+  #degradado{
+    border-radius: 20px;
+    width: 50%;
+    height: 200px;
+    margin-right:  50px;
+    background: repeating-linear-gradient(
+      /* repite patrón de degradados dentro de un mismo cuadro */
+      45deg,
+      blue 0px,
+      /* con estos pixeles define cuando empieza el color y el siguiente cuando empiezan a fundirse */
+      yellow 40px,
+      red 40px,
+      black 80px);
+  }
+  body {
+    background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
+    /* coge estilo de backgroun de link web. Este estilo predomina la primer body porque esta debajo*/
+  }
 </style>
-<header>
+<body>
+  <header>
   <h1>Cooking with FCC!</h1>
   <nav>
     <ul>
@@ -64,3 +91,7 @@
 </main>
 <br>
 <footer>&copy; 2018 FCC Kitchen</footer>
+<div>
+  <p id="degradado"></p>
+</div>
+</body>
