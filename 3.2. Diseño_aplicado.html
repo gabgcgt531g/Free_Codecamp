@@ -1,21 +1,139 @@
 <style>
-  .ball {
+  .square {
     width: 40px;
     height: 40px;
     margin: 50 auto;
     position: fixed;
     background: linear-gradient(
       35deg,
-      #ccffff,
-      #ffcccc
-    );
-    border-radius: 50%;
+      red,
+      black);    
   }
-  #ball1 {
+  #square1 {
     left: 20%;
+    transform: skewY(10deg);
+    /* inclina el elemnto en el eje Y */
   }
-  #ball2 {
+  #square2 {
     left: 65%;
     transform: scale(1.5);
     /* define la direncia de escala entre dos objetos */
+    transform: skewX(-24deg);
+    /* inclina el elemento en el eje X */
+  }  
+  .center {
+    /* luna creada con CSS */
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      background-color: transparent;
+      /* circulo principal transparente para hacer luna decreciente */
+      border-radius: 50px;
+      box-shadow: 25px 10px 0px 0px green;
+      /* se hace sólida la sombre para crear la imagen de la luna y se le quita las propiedades blur */
+  }  
+  .heart {
+    /* crea un objeto en una posición determinada con un color y un tamaño de lado */
+    position: absolute;
+    margin: 150px;
+    top: 0px;
+    right: 0;
+    bottom: 0px;
+    left: 0;
+    background-color: pink;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
   }
+  .heart::after {
+    /* añade un circulo en una posición determinada para darle forma a un lado del corazón*/
+    background-color: pink;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;   
+  }
+  .heart::before {
+    /* añade un circulo en una posición determinada para darle forma a un lado del corazón*/
+    content: "";
+    background-color: pink;
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+  }
+  div:hover{
+    transform: scale(1.1);
+    /* trasforma el elemento cuando pasas el ratón por encima con pseudo elemento. Si en el id se le da la misma propiedad, predomina la de id */
+  }
+  p {
+    height: 20px;
+    width: 70%;
+    background: black;
+    margin: 20px;
+    border-radius: 10px;
+    position: relative;
+    /* hace posible que la animación se desplace en los dos ejes */
+  }
+  #rect {
+    /* define las propiedades de la animación: nombre, tiempo de duración, etc */
+    animation-name: rainbow;
+    animation-duration: 4s;    
+  }
+  @keyframes rainbow{
+    /* hace animación de "rainbow" */
+    0%{
+      background-color: blue;
+      top: 0px;
+      left: 0px;
+    }
+    50%{
+      background-color: green;
+      top: 50px;
+      left: 20px;
+    }
+    100%{
+      background-color: yellow;
+      top: 0px;
+      left: -20px;
+    }
+  }
+  button {
+    /* crea un botón con unas características */
+    border-radius: 5px;
+    color: white;
+    background-color: #0F5897;
+    padding: 5px 10px 8px 10px;
+  }
+
+  button:hover {
+    /* crea características específicas al botón para cuando esta el ratón encima */
+    animation-name: background-color;
+    animation-duration: 500ms;
+    /* hasta aquí, al pasar lo 500ms el botón vuelve al color original */
+    animation-fill-mode: forwards;
+    /* despues del tiempo indicado el botón permanece en el color elegido para cuando tengas en ratón encima */
+  }
+  @keyframes background-color{
+    100%{
+      background-color: #4791d0;
+    }
+  }
+</style>
+<div class="square" id= "square1"></div>
+<!-- define los atributos globales para las dos y el elemento específico que tiene que representar el bloque -->
+<div class="square" id= "square2"></div>
+<div class="center"></div>
+<div class="heart"></div>
+<p id="rect"></p>
+<button>Register</button>
