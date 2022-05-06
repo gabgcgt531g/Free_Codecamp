@@ -1,0 +1,126 @@
+<style>
+  h4 {
+    text-align: center;
+    /* elinea el texto */
+    padding: 10px;
+    /* tamaño de la caja que engloba el texto. Nunca mas pequeña la caja que el texto */
+    background-color: rgba(45, 45, 45, 0.1);
+    /* color del fondo de la caja */
+    font-size: 27px;
+    /* tamaño de la fuente */
+    text-transform: uppercase;
+    /* transforma el texto, en este caso en mayñusculas y se utiliza para no tener que cambiar los elementos que tengas estas prpiedades uno a uno */
+    font-weight: 1000;
+    /* grosor de la fuente */
+  }
+  p {
+    text-align: justify;
+    /* justifica el texto*/
+    line-height: 25px;
+    /* establece la distancia de interlineado */
+  }
+  .links {
+    text-align: left;
+    color: black;
+    opacity: 0.7;
+    /* controla la opacidad del elemento */
+  } 
+  #thumbnail {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    /* La propiedad box-shadow toma los siguientes valores, en orden:
+      - offset-x (qué tan lejos extender la sombra horizontalmente desde el elemento)
+      - offset-y (qué tan lejos extender la sombra verticalmente desde el elemento)
+      - blur-radius
+      - spread-radius */
+  }
+  .fullCard {
+    width: 245px;
+    /* ancho de la tarjeta */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    /* situa la caja en el espacio de la hoja */
+    padding: 4px;
+  }
+  .cardContent {
+    padding: 10px;
+  }
+  a:hover{
+  color: blue;
+  /* genera una pseudo-clase para esta clase, para que la fuente se ponga de color azul cuando pase le cursor por ella  */
+}
+a {
+  color: #000;
+  /* hace que el color de la fuente de esta clase, por defecto sea negro */
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+    position: relative;
+    /* css lo moverá relativo a su posición */
+    top: 5px;    
+    left: 90px;
+    /* marca la posición fija */
+  }
+  #searchbar {
+    position: absolute;
+    /* provee al elemento de una posición inamovible y  abajo la marca */
+    top: 50px;
+    right: 50px;
+  }
+  section {
+    position: relative;
+  }
+  body {
+    min-height: 150vh;
+  }
+  #navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: #767676;
+  }
+  nav ul {
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+  }
+  nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+  a {
+    text-decoration: none;
+  }
+</style>
+<div class="fullCard" id="thumbnail">
+  <div class="cardContent">
+    <div class="cardText">
+      <h4><s>Google</s> Alphabet</h4>
+      <!-- s tacha el texto -->
+      <hr>
+      <!-- añade una línea horizontal -->
+      <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em></p>
+      <!-- u subraya; em da enfasis -->
+    </div>
+    <div class="cardLinks">
+      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br><br>
+      <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+    </div>
+  </div>
+</div>
+<a href="https://freecatphotoapp.com/" target="_blank">CatPhotoApp</a>
+<body>
+  <h1>On Being Well-Positioned</h1>
+  <h2>Move me!</h2>
+  <p>I still think the h2 is where it normally sits.</p>
+  <h1>Welcome!</h1>
+  <section>
+    <form id="searchbar">
+      <label for="search">Search:</label>
+      <input type="search" id="search" name="search">
+      <input type="submit" name="submit" value="Go!">
+    </form>
+  </section>
+</body>
