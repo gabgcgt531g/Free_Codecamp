@@ -10,13 +10,13 @@
       black);    
   }
   #square1 {
-    top: 350px;
+    top: 450px;
     left: 20%;
     transform: skewY(10deg);
     /* inclina el elemnto en el eje Y */
   }
   #square2 {
-    top: 350px;
+    top: 450px;
     left: 65%;
     transform: scale(1.5);
     /* define la direncia de escala entre dos objetos */
@@ -38,12 +38,26 @@
       border-radius: 50px;
       box-shadow: 25px 10px 0px 0px green;
       /* se hace sólida la sombre para crear la imagen de la luna y se le quita las propiedades blur */
-  }  
+  }
+  .back {
+    /* con esta clase consigues animal el fondo de pantalla al compás del corazón */
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    animation-name: backdiv;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  } 
   .heart {
     /* crea un objeto en una posición determinada con un color y un tamaño de lado */
     position: absolute;
     margin: 150px;
-    top: 0px;
+    top: 100px;
     right: 0;
     bottom: 0px;
     left: 0;
@@ -51,6 +65,9 @@
     height: 50px;
     width: 50px;
     transform: rotate(-45deg);
+    animation-name: beat;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
   }
   .heart::after {
     /* añade un circulo en una posición determinada para darle forma a un lado del corazón*/
@@ -73,6 +90,20 @@
     height: 50px;
     top: -25px;
     left: 0px;
+  }
+  @keyframes backdiv {
+    50% {
+      background: black;
+    }
+  }
+
+  @keyframes beat {
+    0% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(0.6) rotate(-45deg);
+    }
   }
   div:hover{
     transform: scale(1.1);
@@ -133,11 +164,69 @@
       background-color: #4791d0;
     }
   }
+  #ball {
+    width: 70px;
+    height: 70px;
+    margin: 50px auto;
+    position: fixed;
+    left: 20%;
+    border-radius: 50%;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+
+  @keyframes fade {
+    50% {
+      left: 60%;
+      opacity: 0.1;
+    }
+  }
+  #ball1 {
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    /* orden que indica la repeticion de la animación. Se pueden poner números o infinito si no quieres que pare */
+  }
+
+  @keyframes bounce{
+    0% {
+      top: 0px;
+    }
+    50% {
+      top: 249px;
+      width: 130px;
+      height: 70px;
+    }
+    100% {
+      top: 0px;
+    }
+  }
 </style>
 <div class="square" id= "square1"></div>
 <!-- define los atributos globales para las dos y el elemento específico que tiene que representar el bloque -->
 <div class="square" id= "square2"></div>
 <div class="center"></div>
+<!-- <div class="back"></div> -->
+<!-- esta comentado para que no desaparezcan los demás elementos -->
 <div class="heart"></div>
 <p id="rect"></p>
+<div id="ball"></div>
+<!-- bola que se desvanece -->
+<div id="ball1"></div>
+<!-- bote infinito de bola -->
 <button>Register</button>
