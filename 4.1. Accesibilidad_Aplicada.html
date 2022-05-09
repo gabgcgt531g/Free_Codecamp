@@ -8,8 +8,28 @@
     top: auto;
     overflow: hidden;
   }
+  body {
+    color: hsl(0, 55%, 15%);
+    background-color: hsl(120, 25%, 55%);
+  }
+  a{
+    color: hsl(0, 55%, 15%);
+  }
+  a:hover {
+    color: red;    
+  }
+  li:hover {
+    color: red;    
+  }
+  button {
+    color: #003366;
+    background-color: #FFFF33;
+    font-size: 16px;
+    padding: 5px;
+  }
   </style>
 </head>
+<!-- en este encabezado se da el estilo para que al ocultar la tabla pero que se desciba en lectores de pantalla -->
 <body>
   <header>
     <h1>Training</h1>
@@ -32,21 +52,28 @@
     <table class="sr-only">
       <caption>Hours of Weekly Training in Stealth, Combat, and Weapons</caption>
       <thead>
+        <!-- encabezado de una tabla -->
         <tr>
+          <!-- fila de una talba -->
           <th></th>
+          <!-- define encabezados de una tabla -->
           <th scope="col">Stealth &amp; Agility</th>
+          <!-- scope relaciona el elemento de encabezado en este caso con los valores de columna (col)-->
           <th scope="col">Combat</th>
           <th scope="col">Weapons</th>
           <th scope="col">Total</th>
         </tr>
       </thead>
       <tbody>
+      <!-- cuerpo de una tabla -->
         <tr>
           <th scope="row">Week One</th>
+          <!-- título de la fila -->
           <td>3</td>
           <td>5</td>
           <td>2</td>
           <td>10</td>
+          <!-- valores de la fila -->
         </tr>
         <tr>
           <th scope="row">Week Two</th>
@@ -80,5 +107,15 @@
     <article><h3>Swords: the best tool to literally divide and conquer</h3></article>
     <article><h3>Breadth-first or depth-first in multi-weapon training?</h3></article>
   </section>
+</body>
+<body>
+  <header>
+    <h1>Danger!</h1>
+  </header>
+  <button>Delete Internet</button>
+  <!-- propiedad para crear botones clicables -->
+  <hr color="#808000">
   <footer>&copy; 2018 Camper Cat</footer>
 </body>
+
+  
