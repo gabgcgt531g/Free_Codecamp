@@ -1,4 +1,4 @@
--- TOKEN -- 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 -- 
+-- TOKEN -- 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 -- 
 
 índice
 INSTALACIÓN GIT HUB {respeta los espacios de cada comando}
