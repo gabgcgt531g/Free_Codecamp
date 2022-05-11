@@ -1,17 +1,8 @@
 <style>
-
-  p {
-    font-size: 20px;
-  }  
-  @media (max-height: 800px) {
-    /* si el elemento es menor o igual de alto de 800px, el tamaño de la fuente del párrafo es 10px, si no el definido anterniormente */
-    p{
-      font-size: 10px;
-    }    
-  }
+  
   .responsive-img {
     /* añade las características para que la imagen tenga un valor acorde al tamaño de la pantalla */
-  max-width: 100%;
+  max-width: 75%;
   height: auto;
   }
   img {
@@ -24,12 +15,32 @@
     bottom: 10px;
   }
   /* reduce a la mitad del tamaño original una imagen para darle la maxima resolución a la misma */
-
+  h2 {
+    width: 80vw;
+    /* la unidades viewport hacen que el elemento se adapte al dispositivo.
+        vw (viewport width): 10vw sería el 10% del ancho del viewport.
+        vh (viewport height): 3vh sería el 3% del alto del viewport.
+        vmin (viewport mínimo): 70vmin sería el 70% de la dimensión más pequeña del viewport (altura o ancho).
+        vmax (viewport máximo): 100vmax sería el 100% de la dimensión más grande del viewport (altura o ancho). */
+  }
+  p {
+    font-size: 20px;
+    width: 75vmin;
+  }   
+  @media (max-height: 800px) {
+    /* si el elemento es menor o igual de alto de 800px, el tamaño de la fuente del párrafo es 10px, si no el definido anterniormente */
+    p{
+      font-size: 10px;
+    }    
+  }
+  
 </style>
 <body>
+  <h2>Importantus Ipsum</h2>
+
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.</p>
 
   <img class="responsive-img" src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg" alt="freeCodeCamp stickers set">
-  <img src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg" alt="freeCodeCamp stickers set">
+  <img src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg" alt="freeCodeCamp stickers set"><br>
   <img class= "mod" src="https://s3.amazonaws.com/freecodecamp/FCCStickers-CamperBot200x200.jpg" alt="freeCodeCamp sticker that says 'Because CamperBot Cares'">
 </body>
