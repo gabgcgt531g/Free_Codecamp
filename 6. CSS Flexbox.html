@@ -4,7 +4,9 @@
   }
   header {
     display: flex;
-    /* posiciona elementos en la pantalla de manera flexible, cuando cambia el tamaño de ella, los elementos no se mueven de su posición */
+    /* Posiciona elementos en la pantalla de manera flexible, cuando cambia el tamaño de ella, los elementos no se mueven de su posición */
+    flex-direction: row;
+    /* Define la dirección del texto de una columna o fila */
   }
   header .profile-thumbnail {
     width: 50px;
@@ -13,24 +15,45 @@
   }
   header .profile-name {
     display: flex;
+    /* Posiciona elementos en la pantalla de manera flexible, cuando cambia el tamaño de ella, los elementos no se mueven de su posición */
+    flex-direction: column;
+    /* Define la dirección del texto, en columna o fila */
+    justify-content: center;
+    /* Justifica filas a partir de un eje central horizonatal (space-between, space-around, space-evenly / flex-start, flex-end, center) */
     margin-left: 10px;
   }
   header .follow-btn {
     display: flex;
-    margin: 0 0 0 auto;
+    /* Posiciona elementos en la pantalla de manera flexible, cuando cambia el tamaño de ella, los elementos no se mueven de su posición */
+    align-items: center;
+    /* Justifica filas a partir de un eje central horizonatal (stretch, baseliine / flex-start, flex-end, center) */
+    margin: 0 0 0 auto;    
   }
   header .follow-btn button {
     border: 0;
-    border-radius: 10px;
-    padding: 10px;
-    height: 35px;    
+    border-radius: 3px;
+    padding: 5px;       
+  }
+  button {
+    background-color: rgb(194, 177, 179); 
   }
   button:hover {
     background-color: aquamarine;
   }
   header h3, header h4 {
     display: flex;
+    /* Posiciona elementos en la pantalla de manera flexible, cuando cambia el tamaño de ella, los elementos no se mueven de su posición */
     margin: 0;
+    flex-wrap: wrap;
+    /* Divide un container flex en filas o columnas y rellena el espacio en funcion de si la opcion es nowrap, wrap o wrap-reverse */
+    flex-shrink: 1;
+    /* Permite que un elemento se contaiga si el contenedor flex es muy pequeño. Se dan valores y cuanto mas grande es, mas reduce su tamaño proporcionalmente al contenedor */
+    flex-grow: 2;
+    /* Controla el tamaño cuando del contenedor primario se expande. Se dan valores y cuanto mas grande es, mas aumenta su tamaño proporcionalmente al contenedor */
+    flex-basis: 50%;
+    /* Epecifica le tamaño inicial del elemento, antes de que flex-shrink y flex-grow hagan modificaciones. La unidades son igual que las demas unidades tamaño, por px, em, %, etc */
+    flex: 1 4 5px;
+    /* Forma abreviada de usar los tres elementos anteriores. Orden de digitos: grow, shrink y basis */
   }
   #inner p {
     margin-bottom: 10px;
@@ -43,23 +66,48 @@
   }
   footer {
     display: flex;
+    /* Posiciona elementos en la pantalla de manera flexible, cuando cambia el tamaño de ella, los elementos no se mueven de su posición */
+    flex-direction: row;
+    /* Define la dirección del texto, en columna o fila */
   }
   footer .stats {
     display: flex;
+    /* Posiciona elementos en la pantalla de manera flexible, cuando cambia el tamaño de ella, los elementos no se mueven de su posición */ 
+    order: 1;
+    /* Asigna la posición de un elemento flex en una columna o una fila */   
     font-size: 15px;
   }
   footer .stats strong {
     font-size: 18px;
   }
   footer .stats .likes {
-    margin-left: 10px;
+    margin-left: 10px;    
   }
   footer .cta {
     margin-left: auto;
+    order: 2;
+    /* Asigna la posición de un elemento flex en una columna o una fila */
   }
   footer .cta button {
     border: 0;
     background: transparent;
+  }
+  #box-container {
+    display: flex;
+    height: 500px;
+  }
+  #box-1 {
+    background-color: dodgerblue;
+    align-self: center;
+    /* Permite colocar cada elemento de una forma individual. Otras propiedades CSS no aceptan elementos flex (float, clear, vertical-align). Acpeta los valores de align-items  */
+    height: 200px;
+    width: 200px;
+  }
+  #box-2 {
+    background-color: orangered;
+    align-self: flex-end;
+    height: 200px;
+    width: 200px;
   }
 </style>
   
@@ -100,3 +148,7 @@
   </div>
 
 </footer>
+<div id="box-container">
+  <div id="box-1"></div>
+  <div id="box-2"></div>
+</div>
