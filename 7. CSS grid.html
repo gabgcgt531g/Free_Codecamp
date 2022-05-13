@@ -1,9 +1,23 @@
 <style>
-  .d1{background:LightSkyBlue;}
-  .d2{background:LightSalmon;}
+  .d1{
+    background:LightSkyBlue;
+    align-self: start;
+    /* alinea el contenido de la celda (center, start o end) verticalmente */
+  }
+  .d2{
+    background:LightSalmon;
+    justify-self: center;
+    /*alinea el contenido de la celda al (center, start o end) horizontalmente */
+  }
   .d3{background:PaleTurquoise;}
   .d4{background:LightPink;}
-  .d5{background:PaleGreen;}
+  .d5{
+    background:PaleGreen;
+    grid-column: 2/4;
+    /* Posiciona el elemnto en la segunda columna de la cuadrícula y ocupa las columnas 2 y 3 */
+    grid-row: 2/3;
+    /* Posiciona el elemento en la segunda fila de la cuadrícula y ocupa  las fila 2*/
+  }
 
   .container {
     font-size: 40px;
@@ -11,10 +25,22 @@
     background: LightGray;
     display: grid;
     /* Crea una cuadrícula en la pantalla */
-    grid-template-columns: 100px 100px 100px;
-    /* Define tres columnas en la cuadrícula y define su anchura */
-    grid-template-rows: 50px 50px;
-    /* Define dos filas en la cuadrícula y define su altura */
+    grid-template-columns: 60px 20% 10em;    
+    /* Define columnas en la cuadrícula y define su anchura */
+    /* Se puede utilizar: auto (ajusta el ancho al contenido), % y fr (dija columna o fila a una porción del espacio disponible) */
+    grid-template-rows: 80px 80px 2fr;
+    /* Define filas en la cuadrícula y define su altura */
+    /* Se puede utilizar: auto (ajusta el ancho al contenido), % y fr (dija columna o fila a una porción del espacio disponible) */
+    grid-column-gap: 10px;
+    /* Crea un espacio, del tamaño deseado, entre columnas */
+    grid-row-gap: 10px;
+    /* Crea un espacio, del tamaño deseado, entre filas */
+    grid-gap: 20px 20px;
+    /* Añade espacio entre filas y columnas. Si solo se pone un valor se asigna para espaciar columnas y filas */   
+    justify-items: start;
+    /* justifica los elementos de la cuadrícula horizontalmente */
+    align-items: center;    
+    /* justifica los elementos de la cuadrícula verticalmente */
   }
 </style>
 
@@ -23,6 +49,6 @@
   <div class="d2">2</div>
   <div class="d3">3</div>
   <div class="d4">4</div>
-  <div class="d5" color: red;>5</div>
+  <div class="d5">5</div>
   <div class="bg-green"></div>
 </div>
