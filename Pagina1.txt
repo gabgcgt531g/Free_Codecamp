@@ -1,0 +1,14 @@
+Objetivo: crear una aplicación que sea funcionalmente similar a https://tribute-page.freecodecamp.rocks
+
+Historias de usuarios:
+
+Su página de homenaje debe tener un elemento con un correspondiente id="main", que contiene todos los demás elementos.
+Debería ver un elemento con un idde title, que contiene una cadena (es decir, texto), que describe el tema de la página de tributo (por ejemplo, "Dr. Norman Borlaug")
+Debería ver un figureo un divelemento con un iddeimg-div
+Dentro del img-divelemento, debería ver un imgelemento con un correspondienteid="image"
+Dentro del img-divelemento, debería ver un elemento con un correspondiente id="img-caption"que contiene contenido textual que describe la imagen que se muestra enimg-div
+Debería ver un elemento con un correspondiente id="tribute-info", que contiene contenido textual que describe el tema de la página de tributo.
+Debería ver un elemento con un correspondiente id="tribute-link", que se vincula a un sitio externo, que contiene información adicional sobre el tema de la página de homenaje. SUGERENCIA: debe darle a su elemento un atributo de targety configurarlo _blankpara que su enlace se abra en una nueva pestaña
+#imageDebe usar max-widthlas propiedades y para heightcambiar el tamaño de manera receptiva, en relación con el ancho de su elemento principal, sin exceder su tamaño original
+Su imgelemento debe estar centrado dentro de su elemento principal
+Complete las historias de usuario y pase todas las pruebas a continuación para completar este proyecto. Dale tu propio estilo personal. ¡Feliz codificación!

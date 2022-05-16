@@ -1,0 +1,121 @@
+<style>
+  .item1 {
+    background: LightSkyBlue;
+    grid-area: header;
+  }
+
+  .item2 {
+    background: LightSalmon;
+    grid-area: advert;
+  }
+
+  .item3 {
+    background: PaleTurquoise;
+    grid-area: content;    
+  }
+
+  .item4 {
+    background: lightpink;
+    grid-area: footer;
+  }
+
+  .container {
+    font-size: 1.5em;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 1fr auto;
+    grid-gap: 10px;
+    grid-template-areas:
+      "header"
+      "advert"
+      "content"
+      "footer";
+      /* Ordena donde van a ir colocadas las zonas de la malla */
+  }
+
+  @media (min-width: 600px){
+    .container{
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas:
+        "advert header"
+        "advert content"
+        "advert footer";
+        /* Si la ventana es mas pequeña que 600px, dice como se va a colocar las 3 filas */
+    }
+  }
+
+  @media (min-width: 700px){
+    .container{
+      grid-template-areas:           
+        "header header"
+        "advert content"
+        "footer footer";
+        /* Si la ventana es mas pequeña que 700px, dice como se va a colocar las 3 filas */
+    }
+  }
+  .container1 {
+    font-size: 1.5em;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 10px;
+    grid-template-areas:
+      "advert header"
+      "advert content"
+      "advert footer";
+  }
+  .item11 {
+    background: LightSkyBlue;
+    grid-area: header;
+  }
+
+  .item21 {
+    background: LightSalmon;
+    grid-area: advert;
+  }
+
+  .item31 {
+    background: PaleTurquoise;
+    grid-area: content;    
+    display: grid;
+    grid-template-columns: auto 1fr;
+    /* Divide en una sub cuadrícula la zelda item31 */
+  }
+
+  .item41 {
+    background: lightpink;
+    grid-area: footer;
+  }
+
+  .itemOne {
+    background: PaleGreen;
+  }
+
+  .itemTwo {
+    background: BlanchedAlmond;
+  }
+</style>
+
+<div class="container">
+  <div class="item1">header</div>
+  <div class="item2">advert</div>
+  <div class="item3">content</div>
+  <div class="item4">footer</div>
+</div>
+<hr>
+<div class="container1">
+  <div class="item11">header</div>
+  <div class="item21">advert</div>
+  <div class="item31">
+    <div class="itemOne">paragraph1</div>
+    <div class="itemTwo">paragraph2</div>
+  </div>
+  <div class="item4">footer</div>
+</div>

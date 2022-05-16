@@ -2,13 +2,17 @@
   .item1{background:LightSkyBlue;}
   .item2{background:LightSalmon;}
   .item3{background:PaleTurquoise;}
-  .item4{background:LightPink;}
+  .item4{
+    background:LightPink;
+    grid-area: 2/1/4/4;
+    /* Empieza en la segunda horizontal y la primera vertical y acaba en la cuarta horizontal y vertical */
+  }
   .item5{
     background:PaleGreen;
     grid-area: footer;
     /* Coloca el elemento en todos los huecos asignados a footer, en este caso */
   }
-
+  
   .container {
     font-size: 40px;
     min-height: 300px;
@@ -25,6 +29,46 @@
       "footer footer footer";
     /* Cada palabra representa una y cada renglon entrecomillado una fila de la cuadrícula */
   }
+  .item11{background:LightSkyBlue;}
+  .item21{background:LightSalmon;}
+  .item31{background:PaleTurquoise;}
+  .item41{background:LightPink;}
+  .item51{background:PaleGreen;}
+
+  .container1 {
+    font-size: 40px;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(90px, 1fr));
+    /* Es lo mismo que ...: 1fr 1fr 1fr, es decir, 3 columnas que midan 1fr tres veces */
+    /* Posteriormente se añade un maximo y un mínimo para cuado se cambie de tamaño la ventana */
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .container2 {
+    font-size: 40px;
+    min-height: 100px;
+    width: 100%;
+    background: Silver;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    /* Hace que las columnas se autoordenen en otras filas automaticamente, para ocupar el espacio, cuando se hace la ventana muy pequeña, pero se quedan igual de tamaño cuando se hace mas grande */
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .container3 {
+    font-size: 40px;
+    min-height: 100px;
+    width: 100%;
+    background: Silver;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* Hace que las columnas se autoordenen en otras filas automaticamente, para ocupar el espacio, cuando se hace la ventana muy pequeña y se ajustan al largo cuando se hace mas grande */
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
 </style>
 
 <div class="container">
@@ -33,4 +77,28 @@
   <div class="item3">3</div>
   <div class="item4">4</div>
   <div class="item5">5</div>
+</div>
+<hr>
+<div class="container1">
+  <div class="item11">1</div>
+  <div class="item21">2</div>
+  <div class="item31">3</div>
+  <div class="item41">4</div>
+  <div class="item51">5</div>
+</div>
+<hr>
+<div class="container2">
+  <div class="item11">1</div>
+  <div class="item21">2</div>
+  <div class="item31">3</div>
+  <div class="item41">4</div>
+  <div class="item51">5</div>
+</div>
+<hr>
+<div class="container3">
+  <div class="item11">1</div>
+  <div class="item21">2</div>
+  <div class="item31">3</div>
+  <div class="item41">4</div>
+  <div class="item51">5</div>
 </div>
